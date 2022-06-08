@@ -17,7 +17,7 @@ if($id) {
 //// sets the comment
 
 $comment->comment = $_POST["comment"] ?? $comment->comment;
-// $comment->nickname = $_POST["nick"] ?? $nickname->nickname;
+$comment->nickname = $_POST["nick"] ?? $nickname->nickname;
 
 if ($id) {
     //update if does exists

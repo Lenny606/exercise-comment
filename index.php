@@ -49,8 +49,8 @@ if($id) {
         <!-- your code here -->
         <div>
             <form action="handle-form.php" method="post">
-                <!-- Nickname: <br>
-                <input type="text" name="nick"> <br> -->
+                Nickname: <br>
+                <input type="text" name="nick"> <br>
                 <textarea name="comment" id="" cols="117" rows="10" autofocus>
 
                 </textarea>
@@ -63,8 +63,8 @@ if($id) {
    $comments = select(null, null, 'Comment');
 
    foreach($comments as $i => $value) {
-    //    echo "<h6>".$comments[$i++]->nickname."</h6>";
-       echo "<p>".$comments[$i++]->comment."</p>";
+       echo "<h6>".$value->nickname."</h6>";
+       echo "<p>".$value->comment."</p>";
    }
    var_dump($comments)
    ?>
