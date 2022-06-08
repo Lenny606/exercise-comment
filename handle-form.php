@@ -13,6 +13,28 @@ if($id) {
     $comment = new Comment;
 }
 
+/////Validate!!!!
+$valid = true; //everythin is ok
+$errors = []; //stores error for user
+if (empty($_POST["comment"])) {
+    $valid = false;
+    $errors[] = "no comment is written";
+}
+
+if (empty($_POST["nick"])) {
+    $valid = false;
+    $errors[] = "pls type your nickname";
+}
+
+if(!$valid) {
+    if ($id){
+        header("Location: index.php?id=" . $id);
+    } else {
+        header("Location: index.php");
+    }
+
+    exit(); //stops execution of the script
+}
 
 //// sets the comment
 

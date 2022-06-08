@@ -12,6 +12,8 @@ if($id) {
     $comment = new Comment;
 }
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,10 +65,10 @@ if($id) {
    $comments = select(null, null, 'Comment');
 
    foreach($comments as $i => $value) {
-       echo "<h6>".$value->nickname."</h6>";
+       echo "<h3 style='text-decoration: underline' >".$value->nickname."</h3>";
        echo "<p>".$value->comment."</p>";
    }
-   var_dump($comments)
+//    var_dump($comments)
    ?>
 </body>
 </html>
