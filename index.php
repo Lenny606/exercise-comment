@@ -4,7 +4,7 @@ require_once 'lib/DBBlackbox.php';
 
 // your code here
 $id = $_GET['id']?? null;
-var_dump($id); 
+// var_dump($id); 
 
 if($id) {
     $comment = find($id, "comment");
@@ -57,6 +57,11 @@ if($id) {
 
                 </textarea>
                 <input type="submit" value="Send the comment">
+                
+                        
+            </form>
+            <form action="deletion.php">
+            <button>Delete last comment</button>
             </form>
             
         </div>
